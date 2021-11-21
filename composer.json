@@ -1,0 +1,25 @@
+{
+    "name": "szualang/eleme-openapi-sdk",
+    "description": "sdk for eleme express",
+    "keywords": ["蜂鸟配送", "eleme", "饿了么", "本地配送"],
+    "type": "library",
+    "license": "MIT",
+    "version": "0.0.1",
+    "authors": [
+        {
+            "name": "szualang",
+            "email": "liangalang@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Devtech\\ElemmeSDK\\": "src/ElemeSDK"
+        }
+    }
+}
