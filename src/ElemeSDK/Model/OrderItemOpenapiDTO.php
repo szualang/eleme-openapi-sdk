@@ -2,7 +2,7 @@
 
 namespace Devtech\ElemmeSDK\Model;
 
-class OrderItemOpenapiDTO extends BaseModel
+class OrderItemOpenapiDTO extends BaseReq
 {
     /**
      * @var int 商品编号

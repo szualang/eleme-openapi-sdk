@@ -2,7 +2,7 @@
 
 namespace Devtech\ElemmeSDK\Model;
 
-class ChainstoreRangeReq
+class ChainstoreRangeReq extends BaseReq
 {
     /**
      * 

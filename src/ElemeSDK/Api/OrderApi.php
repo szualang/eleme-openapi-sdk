@@ -24,19 +24,19 @@ class OrderApi extends BaseApi {
      * @param $params
      * 新增订单 新增配送单接口
      */
-    public function addOrder($params)
+    public function createOrder($params)
     {
-        $this->setUrl("/api/order/addOrder");
+        $this->setUrl("createOrder");
         $this->setBusinessParams($params);
     }
 
     /**
      * @param $params
-     * 重新发布订单 在调用新增订单后，订单被取消、过期或者投递异常的情况下，调用此接口，可以在达达平台重新发布订单 接口调用URL地址：/api/order/reAddOrder。
+     * 取消订单
      */
-    public function reAddOrder($params)
+    public function cancelOrder($params)
     {
-        $this->setUrl("/api/order/reAddOrder");
+        $this->setUrl("cancelOrder");
         $this->setBusinessParams($params);
     }
     

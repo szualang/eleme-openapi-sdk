@@ -2,7 +2,7 @@
 
 namespace Devtech\ElemmeSDK\Model;
 
-class BaseModel
+class BaseReq
 {
 
     public function jsonString() {

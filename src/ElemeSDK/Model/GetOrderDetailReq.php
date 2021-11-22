@@ -2,7 +2,7 @@
 
 namespace Devtech\ElemmeSDK\Model;
 
-class GetOrderDetailReq
+class GetOrderDetailReq extends BaseReq
 {
     /** 
      * @var string 订单号 

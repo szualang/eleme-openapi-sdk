@@ -2,7 +2,7 @@
 
 namespace Devtech\ElemmeSDK\Model;
 
-class CancelReasonDTO extends BaseModel
+class CancelReasonDTO extends BaseReq
 {
     /**
      * @var int 取消原因code

@@ -2,7 +2,7 @@
 
 namespace Devtech\ElemmeSDK\Model;
 
-class Token
+class Token extends BaseReq
 {
 
     /**

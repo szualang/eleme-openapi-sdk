@@ -2,7 +2,7 @@
 
 namespace Devtech\ElemmeSDK\Model;
 
-class PreCancelOrderReq
+class PreCancelOrderReq extends BaseReq
 {
     /** 
      * @var string 订单号 

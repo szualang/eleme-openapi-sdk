@@ -2,7 +2,7 @@
 
 namespace Devtech\ElemmeSDK\Model;
 
-class PreCreateOrderReq extends BaseModel
+class PreCreateOrderReq extends BaseReq
 {
     /**
      * @var string 外部订单号
