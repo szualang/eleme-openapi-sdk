@@ -4,51 +4,31 @@ namespace Devtech\ElemmeSDK\Model;
 
 class Token
 {
-    /**
-     * @var string app_id
-     */
-    private $app_id;
 
     /**
      * @var string 商户id
      */
-    private $merchant_id;
+    public $merchant_id;
 
     /**
      * @var string accessToken
      */
-    private $access_token;
+    public $access_token;
 
     /**
      * @var string 过期时间
      */
-    private $expire_in;
+    public $expire_in;
 
     /**
      * @var string 刷新token
      */
-    private $refresh_token;
+    public $refresh_token;
 
     /**
      * @var string 刷新token过期时间
      */
-    private $re_expire_in;
-
-    /**
-     * @return string
-     */
-    public function getAppId()
-    {
-        return $this->app_id;
-    }
-
-    /**
-     * @param string $app_id
-     */
-    public function setAppId($app_id)
-    {
-        $this->app_id = $app_id;
-    }
+    public $re_expire_in;
 
     /**
      * @return string

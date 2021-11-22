@@ -2,17 +2,17 @@
 
 namespace Devtech\ElemmeSDK\Model;
 
-class CancelReasonDTO
+class CancelReasonDTO extends BaseModel
 {
     /**
      * @var int 取消原因code
      */
-    private $orderCancelCode;
+    public $orderCancelCode;
 
     /**
      * @var string 取消原因描述
      */
-    private $orderCancelDesc;
+    public $orderCancelDesc;
 
     /**
      * @return int

@@ -2,42 +2,42 @@
 
 namespace Devtech\ElemmeSDK\Model;
 
-class OrderItemOpenapiDTO
+class OrderItemOpenapiDTO extends BaseModel
 {
     /**
      * @var int 商品编号
      */
-    private $item_id;
+    public $item_id;
 
     /**
      * 商品名称(不超过128个字符)
      */
-    private $item_name;
+    public $item_name;
 
     /**
      * 商品数量
      */
-    private $item_quantity;
+    public $item_quantity;
 
     /**
      * 商品原价(分)
      */
-    private $item_amount_cent;
+    public $item_amount_cent;
 
     /**
      * 商品实际支付金额，必须是乘以数量后的金额，否则影响售后环节的赔付标准
      */
-    private $item_actual_amount_cent;
+    public $item_actual_amount_cent;
 
     /**
      * 商品尺寸
      */
-    private $item_size;
+    public $item_size;
 
     /**
      * 商品备注(不超过255个字符)
      */
-    private $item_remark;
+    public $item_remark;
 
     /**
      * @return mixed

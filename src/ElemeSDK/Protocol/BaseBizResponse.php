@@ -10,22 +10,22 @@ class BaseBizResponse{
     /**
      * 签名
      */
-    private $sign;
+    public $sign;
 
     /**
      * 请求响应返回的code
      */
-    private $code;
+    public $code;
 
     /**
      * 请求响应返回的信息
      */
-    private $msg;
+    public $msg;
 
     /**
      * 请求响应返回的结果
      */
-    private $business_data;
+    public $business_data;
 
     /**
      * @return mixed

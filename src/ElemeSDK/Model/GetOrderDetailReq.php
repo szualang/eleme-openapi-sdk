@@ -7,12 +7,12 @@ class GetOrderDetailReq
     /** 
      * @var string 订单号 
      */
-    private $order_id;
+    public $order_id;
     
     /** 
      * @var string 外部订单号 
      */
-    private $partner_order_code;
+    public $partner_order_code;
 
     /**
      * @return string

@@ -5,7 +5,7 @@
 namespace Devtech\ElemmeSDK\Api;
 
 
-use Devtech\ElemmeSDK\Config\BaseUrl;
+use Devtech\ElemmeSDK\Config\BaseConfig;
 use Devtech\ElemmeSDK\Config\Config;
 
 /**
@@ -14,33 +14,26 @@ use Devtech\ElemmeSDK\Config\Config;
  * 新增订单
  */
 class OauthApi extends BaseApi {
-    private $baseUrl = null;
 
     public function __construct($debug = true)
     {
         parent::__construct($debug);
-        $this->baseUrl = new BaseUrl($this->isDebug());
     }
 
 
     /**
-     * @param $params
-     * 获取token
+     * 获取token接口
      */
-    public function tokenByCode($params)
+    public function tokenURL()
     {
-        $this->setUrl($this->baseUrl->getAuthorizeUrl());
-        $this->setBusinessParams($params);
+        $this->setUrl(BaseConfig::TOKEN_URL);
     }
 
     /**
-     * @param $params
-     * 重新发布订单 在调用新增订单后，订单被取消、过期或者投递异常的情况下，调用此接口，可以在达达平台重新发布订单 接口调用URL地址：/api/order/reAddOrder。
+     * 刷新token接口
      */
-    public function reAddOrder($params)
+    public function refreshTokenUrl()
     {
-        $this->setUrl($this->baseUrl->getAuthorizeUrl());
-        $this->setBusinessParams($params);
+        $this->setUrl(BaseConfig::REFRESH_TOKEN_URL);
     }
-
 }

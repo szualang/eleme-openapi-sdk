@@ -7,27 +7,27 @@ class CancelOrderReq
     /** 
      * @var string 订单号 
      */
-    private $order_id;
+    public $order_id;
     /** 
      * @var string 外部订单号 
      */
-    private $partner_order_code;
+    public $partner_order_code;
     /** 
      * @var int 从可用取消原因列表接口返回结果选择 
      */
-    private $order_cancel_code;
+    public $order_cancel_code;
     /** 
      * @var float 单位分取消实际需扣金额，从预取消接口拿 
      */
-    private $actual_cancel_cost_cent;
+    public $actual_cancel_cost_cent;
     /** 
      * @var string 取消原因补充 20字以内 
      */
-    private $order_cancel_other_reason;
+    public $order_cancel_other_reason;
     /** 
      * @var int 1商户取消, 2 用户取消 
      */
-    private $order_cancel_role;
+    public $order_cancel_role;
 
     /**
      * @return string

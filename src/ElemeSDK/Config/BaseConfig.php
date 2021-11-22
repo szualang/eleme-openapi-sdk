@@ -5,13 +5,14 @@ namespace Devtech\ElemmeSDK\Config;
 /**
  * URL配置
  */
-class BaseUrl
+class BaseConfig
 {
     const SANDBOX_SERVER = 'https://exam-anubis.ele.me/';
-
     const PRODUCTION_SERVER = 'https://open-anubis.ele.me/';
+    const TOKEN_URL = 'token';
+    const REFRESH_TOKEN_URL = 'refreshToken';
 
-    private $debug;
+    public $debug;
 
     /**
      * @return mixed
@@ -43,14 +44,6 @@ class BaseUrl
     public function getServerHost()
     {
         return $this->debug ? self::SANDBOX_SERVER : self::PRODUCTION_SERVER;
-    }
-
-    /**
-     * @return string Oauth授权认证地址
-     */
-    public function getAuthorizeUrl()
-    {
-        return $this->getServerHost() . 'app-auth';
     }
 
     /**

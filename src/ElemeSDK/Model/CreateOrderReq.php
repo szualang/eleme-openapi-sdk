@@ -7,159 +7,159 @@ class CreateOrderReq
     /**
      * @var string 外部订单号
      */
-    private $partner_order_code;
+    public $partner_order_code;
 
     /**
      * @var string 取货经度
      */
-    private $transport_longitude;
+    public $transport_longitude;
 
     /**
      * @var string 取货纬度
      */
-    private $transport_latitude;
+    public $transport_latitude;
 
     /**
      * @var string 取货点联系人电话
      */
-    private $transport_tel;
+    public $transport_tel;
 
     /**
      * @var string 外部门店id
      */
-    private $out_shop_code;
+    public $out_shop_code;
     /**
      * @var string 门店id
      */
-    private $chain_store_id;
+    public $chain_store_id;
     /**
      * @var string 商户订单来源（如 饿了么、美团等）
      */
-    private $order_source;
+    public $order_source;
     /**
      * @var string 服务商品id
      */
-    private $service_goods_id;
+    public $service_goods_id;
     /**
      * @var string 基础商品id
      */
-    private $base_goods_id;
+    public $base_goods_id;
     /**
      * @var int 订单类型（1:即时单，3:预约单）
      */
-    private $order_type;
+    public $order_type;
     /**
      * @var string 需要送达时间
      */
-    private $require_receive_time;
+    public $require_receive_time;
     /**
      * @var string 下单时间
      */
-    private $order_add_time;
+    public $order_add_time;
     /**
      * @var int 是否使用优惠券
      */
-    private $use_coupon;
+    public $use_coupon;
     /**
      * @var string 预计出餐时间（毫秒)
      */
-    private $expect_fetch_time;
+    public $expect_fetch_time;
     /**
      * @var string 取货点地址描述
      */
-    private $transport_address;
+    public $transport_address;
     /**
      * @var int 经纬度来源
      */
-    private $position_source;
+    public $position_source;
     /**
      * @var string 收货人地址 文字描述
      */
-    private $receiver_address;
+    public $receiver_address;
     /**
      * @var float 收货人经度
      */
-    private $receiver_longitude;
+    public $receiver_longitude;
     /**
      * @var float 收货人纬度
      */
-    private $receiver_latitude;
+    public $receiver_latitude;
     /**
      *  @var float 订单商品总金额
      */
-    private $goods_total_amount_cent;
+    public $goods_total_amount_cent;
     /**
      *  @var float 订单商品客户实际支付金额
      */
-    private $goods_actual_amount_cent;
+    public $goods_actual_amount_cent;
     /**
      * @var float 订单小费
      */
-    private $order_tip_amount_cent;
+    public $order_tip_amount_cent;
     /**
      * @var float 订单总重量
      */
-    private $goods_weight;
+    public $goods_weight;
     /**
      * @var int 货物件数
      */
-    private $goods_count;
+    public $goods_count;
     /**
      * @var array OrderItemOpenapiDTO 货物明细
      */
-    private $goodsItemList;
+    public $goodsItemList;
     /**
      * @var string 商家订单流水号
      */
-    private $serial_number;
+    public $serial_number;
     /**
      * @var string 订单来源的 单号
      */
-    private $order_source_order_id;
+    public $order_source_order_id;
     /**
      * @var string 收货人姓名
      */
-    private $receiver_name;
+    public $receiver_name;
     /**
      * @var string 收货人主要联系方式
      */
-    private $receiver_primary_phone;
+    public $receiver_primary_phone;
     /**
      * @var string 收货人备用联系方式
      */
-    private $receiver_second_phone;
+    public $receiver_second_phone;
     /**
      * @var string 分机号
      */
-    private $customer_ext_tel;
+    public $customer_ext_tel;
     /**
      * @var string 用户备注
      */
-    private $order_remark;
+    public $order_remark;
     /**
      * @var string 预询后下单标识
      */
-    private $pre_create_order_t_index_id;
+    public $pre_create_order_t_index_id;
     /**
      * @var string 优惠券id
      */
-    private $warehouse_id;
+    public $warehouse_id;
     /**
      * @var string 优惠后配送费总价格(含入参小费金额)入单实际价格取自预下单接口出参同名字段!!!
      */
-    private $actual_delivery_amount_cent;
+    public $actual_delivery_amount_cent;
     /**
      * @var string 核销码（贵品服务必填）
      */
-    private $write_off_code;
+    public $write_off_code;
     /**
      * @var string 取消码（贵品服务必填）
      */
-    private $cancel_code;
+    public $cancel_code;
     /**
      * @var string 取餐码
      */
-    private $fetch_code;
+    public $fetch_code;
 
     /**
      * @return string

@@ -65,4 +65,47 @@ class Helper
             'return mb_convert_encoding(pack("H*", $matches[1]), "UTF-8", "UCS-2BE");'
         ), $string);
     }
+
+    /**
+     * 返回当前的毫秒时间戳
+     * @return float
+     */
+    public static function millisecond()
+    {
+        list($msec, $sec) = explode(' ', microtime());
+        return (float)sprintf('%.0f', (floatval($msec) + floatval($sec)) * 1000);
+    }
+
+    /**
+     * PHP sha256()
+     * @param $data
+     * @param false $rawOutput
+     * @return false|string
+     */
+    public static function sha256($data, $rawOutput = false)
+    {
+        if (!is_scalar($data)) {
+            return false;
+        }
+        $data = (string)$data;
+        $rawOutput = !!$rawOutput;
+        return hash('sha256', $data, $rawOutput);
+    }
+
+    /**
+     * 格式化参数格式化成url参数
+     * @param $values
+     * @return string
+     */
+    public static function toUrlParams($values)
+    {
+        $buff = '';
+        foreach ($values as $k => $v) {
+            if ($k != 'sign' && $v != '' && !is_array($v)) {
+                $buff .= $k . '=' . $v . '&';
+            }
+        }
+        return trim($buff, '&');
+    }
+
 }

@@ -8,16 +8,16 @@ class ChainstoreRangeReq
      * 
      * @var int 门店id
      */
-    private $chain_store_id;
+    public $chain_store_id;
     /**
      * @var string 门店编码
      */
-    private $out_shop_code;
+    public $out_shop_code;
 
     /**
      * @var int 基础商品id
      */
-    private $basic_goods_id;
+    public $basic_goods_id;
 
     /**
      * @return int

@@ -7,15 +7,15 @@ class PreCancelOrderReq
     /** 
      * @var string 订单号 
      */
-    private $order_id;
+    public $order_id;
     /** 
      * @var string 外部订单号 
      */
-    private $partner_order_code;
+    public $partner_order_code;
     /** 
      * @var int 从可用取消原因列表接口返回结果选择 
      */
-    private $order_cancel_code;
+    public $order_cancel_code;
 
     /**
      * @return string
