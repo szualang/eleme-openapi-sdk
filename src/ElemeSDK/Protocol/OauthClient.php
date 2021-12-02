@@ -31,22 +31,15 @@ class OauthClient
     }
 
     /**
-     * token签名
-     * @param array $postParam
-     * @return string
+     * 签名生成signature
      */
-    protected function tokenSign(array $postParam)
+    public function sign($postParam)
     {
         // 先排序
         ksort($postParam);
-
-        $waitSign = '';
-        foreach ($postParam as $key => $item) {
-            if ($item) {
-                $waitSign .= $key . $item;
-            }
-        }
-        return strtolower(sha1($this->config->getAppSecret() . $waitSign));
+        $waitSign = Helper::toUrlParams($postParam);
+        $sign = Helper::sha256($this->config->getAppSecret() . $waitSign);
+        return strtolower($sign);
     }
 
     /**
@@ -73,11 +66,11 @@ class OauthClient
         $postParam['code'] = $auth_code;
         $postParam['merchant_id'] = $merchant_id;
         $postParam['app_id'] = $this->config->getAppId();
-        $postParam['timestamp'] = time();
-        $postParam['signature'] = $this->tokenSign($postParam);
-
+        $postParam['timestamp'] = Helper::millisecond();
+        $postParam['signature'] = $this->sign($postParam);
+        $this->api->tokenURL();
         $url = $this->config->getOpenApiUrl() . $this->api->getUrl();
-        $response = $client->post($url, $postParam);
+        $response = $client->post($url, json_encode($postParam));
         $result = json_decode(strval($response), true);
         $this->checkError($result);
         return $result;
@@ -108,10 +101,10 @@ class OauthClient
         $postParam['merchant_id'] = $merchant_id;
         $postParam['app_id'] = $this->config->getAppId();
         $postParam['timestamp'] = Helper::millisecond();
-        $postParam['signature'] = $this->tokenSign($postParam);
-
+        $postParam['signature'] = $this->sign($postParam);
+        $this->api->refreshTokenUrl();
         $url = $this->config->getOpenApiUrl() . $this->api->getUrl();
-        $response = $client->post($url, $postParam);
+        $response = $client->post($url, json_encode($postParam));
         $result = json_decode(strval($response), true);
         $this->checkError($result);
         return $result;

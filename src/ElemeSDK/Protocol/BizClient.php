@@ -50,7 +50,7 @@ class BizClient
 
     /**
      * 请求调用api
-     * @return BaseBizResponse
+     * @return bool|BaseBizResponse|string
      */
     public function makeRequest()
     {

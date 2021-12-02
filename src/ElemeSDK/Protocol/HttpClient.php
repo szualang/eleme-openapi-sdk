@@ -12,7 +12,7 @@ class HttpClient
     /**
      * 模拟POST请求
      * @param string $url 请求地址
-     * @param array $data 请求数据
+     * @param mixed $data 请求数据
      * @param string $type 请求类型
      * @param false $useCert 是否引入微信支付证书
      * @param array $sslCert 证书路径
