@@ -4,7 +4,7 @@
     "keywords": ["蜂鸟配送", "eleme", "饿了么", "本地配送"],
     "type": "library",
     "license": "MIT",
-    "version": "0.0.1",
+    "version": "0.2.0",
     "authors": [
         {
             "name": "szualang",
